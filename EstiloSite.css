@@ -1,0 +1,460 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: 
+        linear-gradient(135deg, rgba(224, 242, 254, 0) 0%, rgba(247, 250, 252, 0) 100%),
+        url("Imagens/imagens-dev-cibersec.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #334155;
+}
+
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover, a:focus {
+    color: #1e40af;
+    outline: none;
+}
+
+header {
+    background: #1e293b;
+    color: #f1f5e9;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 15px rgba(30,41,59,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+.header-container {
+    overflow: hidden; 
+    flex-grow: 1; 
+}
+
+header h1 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: 0.12rem;
+    white-space: nowrap;
+    user-select: none;
+   
+    animation: scroll-left 12.5s linear infinite; 
+    
+    transform: translateX(100%);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+nav a:focus,
+nav a:hover {
+    color: #3b82f6;
+    outline-offset: 3px;
+    outline-color: #3b82f6;
+}
+
+/* Botão menu mobile */
+#menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #f1f5e9;
+    cursor: pointer;
+}
+
+main {
+    max-width: 1080px;
+    margin: 3rem auto 4rem;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 4.5rem;
+    opacity: 0;
+    transform: translateY(15px);
+    animation-fill-mode: forwards;
+    animation-name: fadeSlideIn;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-fade {
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(15px);
+    animation-name: fadeSlideIn;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.delay-1 {
+    animation-delay: 0.15s;
+}
+.delay-2 {
+    animation-delay: 0.3s;
+}
+.delay-3 {
+    animation-delay: 0.45s;
+}
+.delay-4 {
+    animation-delay: 0.6s;
+}
+.delay-5 {
+    animation-delay: 0.75s;
+}
+
+@keyframes fadeSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-size: 2.4rem;
+    border-bottom: 4px solid #3b82f6;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.5rem;
+    color: #3b82f6; 
+    font-weight: 700;
+    user-select: none;
+}
+h3 {
+    font-size: 1.45rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.18rem;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+    line-height: 1.65;
+}
+ul {
+    list-style-position: inside;
+    margin-bottom: 1.6rem;
+}
+ul li {
+    margin-bottom: 0.9rem;
+    font-size: 1.13rem;
+    color: #475569;
+}
+
+.highlight {
+    color: #3b82f6;
+    font-weight: 700;
+}
+
+.process-list li {
+    color: white !important;
+}
+#equipe ul li {
+    color: white !important;
+}
+form label {
+    color: white !important;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.service-item {
+    background: rgb(255, 255, 255);
+    border-radius: 14px;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.1),
+        0 10px 15px -3px rgba(59, 130, 246, 0.3);
+    flex: 1 1 280px;
+    padding: 28px 22px;
+    border: 3px solid transparent;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    cursor: pointer;
+    outline-offset: 3px;
+}
+.service-item:hover,
+.service-item:focus {
+    transform: translateY(-8px);
+    border-color: #3b82f6;
+    box-shadow:
+        0 4px 12px rgba(59, 130, 246, 0.4),
+        0 14px 25px -5px rgba(59, 130, 246, 0.55);
+    outline: none;
+}
+
+.service-item.dev-sites {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url('Imagens/programadores programando 3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f1f5e9;
+}
+.service-item.dev-sites h3,
+.service-item.dev-sites p {
+    color: #f1f5e9;
+}
+
+.service-item.pentest {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url('Imagens/pentesters 3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f1f5e9;
+}
+.service-item.pentest h3,
+.service-item.pentest p {
+    color: #f1f5e9;
+}
+
+.service-item.analise-falhas {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url('Imagens/Consultores de Segurança da Informação.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f1f5e9;
+}
+.service-item.analise-falhas h3,
+.service-item.analise-falhas p {
+    color: #f1f5e9;
+}
+
+.service-item.mitigacao-riscos {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url('Imagens/programadores programando 4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f1f5e9;
+}
+.service-item.mitigacao-riscos h3,
+.service-item.mitigacao-riscos p {
+    color: #f1f5e9;
+}
+
+.service-item.consultoria-seguranca {
+    background-image:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url('Imagens/Consultores de Segurança da Informação 2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f1f5e9;
+}
+.service-item.consultoria-seguranca h3,
+.service-item.consultoria-seguranca p {
+    color: #f1f5e9;
+}
+
+
+.service-item.dev-apps {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
+        url("Imagens/Desenvolvedores-de-apps.png"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f1f5e9;
+}
+.service-item.dev-apps h3,
+.service-item.dev-apps p {
+    color: #f1f5e9;
+}
+
+.challenges.equipe-fundo {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('Imagens/equipe desenvolvedores.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 14px;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.2);
+    padding: 40px 50px;
+    color: #f1f5e9;
+}
+
+.challenges.equipe-fundo ul li {
+    color: #f1f5e9;
+}
+
+.process-list {
+    margin-left: 28px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    color: white;
+    padding: 16px 42px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.18rem;
+    cursor: pointer;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease;
+    display: inline-block;
+    margin-top: 25px;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #1e40af;
+    box-shadow: 0 0 13px #1e40af;
+    outline: none;
+}
+
+form {
+    
+}
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: white !important;
+}
+form input,
+form textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 26px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: 2px solid #cbd5e1;
+    transition: border-color 0.35s ease;
+    font-family: inherit;
+    color: #334155;
+    background-color: #f0f9ff;
+}
+form input::placeholder,
+form textarea::placeholder {
+    color: #94a3b8;
+}
+form input:focus,
+form textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+}
+
+footer {
+    background-color: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 1rem;
+    box-shadow: 0 -3px 14px rgba(30, 41, 59, 0.7);
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 12px;
+        display: none; 
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+        margin-left: 0;
+    }
+
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    /* Ajustes fundo no cel */
+    .challenges.equipe-fundo {
+        padding: 25px 20px;
+    }
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-float img {
+    width: 60px; 
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float img {
+        width: 50px;
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

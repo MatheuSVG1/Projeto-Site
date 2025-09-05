@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>PRISMA CODE - Desenvolvimento e Segurança</title>
+    <link rel="stylesheet" href="EstiloSite.css" />
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <h1>PRISMA CODE</h1>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    <nav id="nav-menu" aria-label="Menu principal">
+        <a href="#sobre">Quem Somos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Processo</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#desafios">Desafios</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<main>
+
+    <section id="sobre" aria-label="Quem Somos" class="section-fade">
+        <h2>Quem Somos</h2>
+        <p>No <span class="highlight">PRISMA CODE</span>, unimos desenvolvimento de alta qualidade com segurança digital para proteger e impulsionar seu negócio ou projeto pessoal.</p>
+        <p>Somos uma equipe de desenvolvedores e profissionais de segurança da informação que possuem as melhores práticas para garantir eficiência, transparência e confiança.</p>
+    </section>
+
+    <section id="servicos" aria-label="Serviços oferecidos" class="section-fade delay-1">
+        <h2>Serviços</h2>
+        <p>Oferecemos uma gama completa para atender às necessidades de pessoas e empresas:</p>
+        <div class="services-list">
+            <article class="service-item dev-sites" tabindex="0">
+                <h3>Desenvolvimento de Sites</h3>
+                <p>Criação de sites modernos, responsivos e seguros alinhados à identidade do seu negócio.</p>
+            </article>
+            <article class="service-item pentest" tabindex="0">
+                <h3>Testes de Penetração (Pentest)</h3>
+                <p>Análises White Box, Gray Box e Black Box para identificar vulnerabilidades e aumentar sua proteção.</p>
+            </article>
+            <article class="service-item analise-falhas" tabindex="0">
+                <h3>Análise e Correção de Falhas</h3>
+                <p>Diagnóstico detalhado com soluções práticas para a proteção efetiva dos seus dados e sistemas.</p>
+            </article>
+            <article class="service-item mitigacao-riscos" tabindex="0">
+                <h3>Prevenção e Mitigação de Riscos</h3>
+                <p>Monitoramento contínuo e estratégias avançadas para prevenir ataques e assegurar seu ambiente.</p>
+            </article>
+            <article class="service-item consultoria-seguranca" tabindex="0">
+                <h3>Consultoria de Segurança</h3>
+                <p>Planejamento personalizado, alinhado à maturidade e necessidades do seu negócio.</p>
+            </article>
+            <article class="service-item dev-apps" tabindex="0">
+                <h3>Desenvolvimento de Aplicativos</h3>
+                <p>Criação de aplicativos para iOS e Android, com design intuitivo e segurança de ponta.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="processo" aria-label="Nosso processo de trabalho" class="section-fade delay-2">
+        <h2>Nosso Processo</h2>
+        <p>Trabalhamos com metodologia clara e eficiente para garantir máxima proteção e qualidade:</p>
+        <ul class="process-list">
+            <li>Coleta e análise detalhada das informações e necessidades do cliente.</li>
+            <li>Identificação detalhada de vulnerabilidades e riscos.</li>
+            <li>Exploração controlada dessas falhas para avaliação realista dos impactos.</li>
+            <li>Entrega de relatório completo com soluções e recomendações personalizadas.</li>
+            <li>Acompanhamento e suporte contínuo para manutenção da segurança.</li>
+        </ul>
+    </section>
+
+    <section id="equipe" aria-label="Conheça nossa equipe" class="section-fade delay-3">
+        <h2>Nossa Equipe</h2>
+        <p>Contamos com um time de desenvolvedores em diversas áreas da tecnologia da informação, com ampla experiência e comprometimento ético.</p>
+        <ul>
+            <li>Especialistas em Pentest.</li>
+            <li>Desenvolvedores com foco em segurança e usabilidade.</li>
+        </ul>
+    </section>
+
+    <section id="desafios" aria-label="Desafios enfrentados e soluções" class="section-fade delay-4">
+        <h2>Desafios que Enfrentamos</h2>
+        <div class="challenges equipe-fundo">
+            <ul>
+                <li>Prevenir ataques antes que eles aconteçam, não só reagir a eles.</li>
+                <li>Reduzir custos mitigando riscos alinhando segurança à operação corporativa.</li>
+                <li>Garantir processos dinâmicos e contínuos de proteção.</li>
+                <li>Alinhar estratégias de segurança ao crescimento e maturidade da empresa.</li>
+                <li>Responder efetivamente às ameaças para proteger a reputação.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contato" aria-label="Formulário de contato e orçamento" class="section-fade delay-5">
+        <h2>Contato</h2>
+        <p>Quer desenvolver um projeto seguro e resistente a ataques? Solicite orçamento ou tire suas dúvidas abaixo.</p>
+        <form id="contactForm" onsubmit="return enviarFormulario();" novalidate>
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required aria-required="true" />
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required aria-required="true" />
+            
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(DD) 99999-9999" />
+            
+            <label for="mensagem">Mensagem / Orçamento</label>
+            <textarea id="mensagem" name="mensagem" rows="6" placeholder="Descreva seu projeto ou dúvida" required aria-required="true"></textarea>
+            
+            <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+    </section>
+
+</main>
+
+<a href="https://api.whatsapp.com/send?phone=5544991319108" class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
+    <img src="Imagens/logo.whatsapp.png" alt="Logo do WhatsApp" />
+</a>
+
+<footer>
+    &copy; 2025 PRISMA CODE | Todos os direitos reservados.
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
